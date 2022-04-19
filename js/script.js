@@ -31,7 +31,6 @@ var errorMessage = document.getElementById("error-message");
 var weatherColumn = document.getElementById("weather-column");
 
 //create a variable for api key
-var apiKey = "2349865c8d96bc1f529eef73d064f41b";
 
 //create a function for api request and response
 function apiCall(city) {
