@@ -1,0 +1,12 @@
+body,
+object {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}

@@ -4,8 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Application</title>
+    <link href="bulma/css/bulma.min.css" type="text/css" rel="stylesheet" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="css/nav.css" type="text/css" rel="stylesheet" />
+    <link href="css/weather/snow.css" type="text/css" rel="stylesheet" />
     <script src="js/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <section class="hero is-success is-fullheight">
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <header class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item">
+                <img
+                  src="https://bulma.io/images/bulma-type-white.png"
+                  alt="Logo"
+                />
+              </a>
+              <span class="navbar-burger" data-target="navbarMenuHeroC">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroC" class="navbar-menu fill">
+              <div class="navbar-end">
+                <a class="navbar-item is-active"> Home </a>
+                <a class="navbar-item"> Examples </a>
+                <a class="navbar-item"> Documentation </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <section id="banner-text">
+            <p class="title is-1">Receive your free daily weather forecast.</p>
+            <p class="subtitle">Type in your region to see it in action:</p>
+            <div class="field has-addons field-center">
+              <p class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Your City"
+                  id="search-city"
+                />
+              </p>
+              <p class="control">
+                <button class="button" id="search-button">Check it</button>
+              </p>
+              <p id="error-message" class="hide">Please enter the city name</p>
+            </div>
+          </section>
+          <section id="main-content">
+            <div class="columns" id="weather-column">
+              <div class="column">
+                <div class="snow-wrap">
+                  <div class="snow">
+                    <!-- <div id="city-temp">10C</div>
+                    <div id="city-name">Brampton</div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div id="city-name"></div>
+                <div id="city-temp"></div>
+              </div>
+              <div class="column">
+                <div id="city-name"></div>
+                <div id="city-temp"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="hero-foot">
+        <p>2022 Nidhi Patel</p>
+      </div>
+    </section>
+  </body>
 </html>

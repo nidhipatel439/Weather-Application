@@ -1,0 +1,123 @@
+/* SNOW ANIMATION EFFECT */
+
+:root {
+  --fullscreen-animation-background-size: 650px;
+  --block-animation-background-size: 250px;
+}
+
+/* Snow Animation for Full Screen - Start */
+
+.full-screen-snow-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/snow/image/background.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  overflow: hidden;
+}
+.full-screen-snow,
+.full-screen-snow::after,
+.full-screen-snow::before {
+  content: "";
+  top: calc(-1 * var(--fullscreen-animation-background-size));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: radial-gradient(4px 4px at 100px 50px, #ffffff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #ffffff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #ffffff, transparent),
+    radial-gradient(4px 4px at 400px 350px, #ffffff, transparent),
+    radial-gradient(6px 6px at 500px 100px, #ffffff, transparent),
+    radial-gradient(3px 3px at 50px 200px, #ffffff, transparent),
+    radial-gradient(4px 4px at 150px 300px, #ffffff, transparent),
+    radial-gradient(6px 6px at 250px 400px, #ffffff, transparent),
+    radial-gradient(3px 3px at 350px 500px, #ffffff, transparent);
+  background-size: var(--fullscreen-animation-background-size)
+    var(--fullscreen-animation-background-size);
+  animation: fullScreenSnowAnimation 3s linear infinite;
+}
+.full-screen-snow::after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-direction: reverse;
+  animation-duration: 6s;
+}
+.full-screen-snow::before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-direction: reverse;
+  animation-duration: 9s;
+}
+
+@keyframes fullScreenSnowAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(var(--fullscreen-animation-background-size));
+  }
+}
+
+/* Snow Animation for Full Screen - End */
+
+/* Snow Animation for Block - Start */
+.block-snow-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/snow/image/red-background.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  overflow: hidden;
+}
+.block-snow,
+.block-snow::after,
+.block-snow::before {
+  content: "";
+  top: calc(-1 * var(--block-animation-background-size));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: radial-gradient(4px 4px at 50px 25px, #ffffff, transparent),
+    radial-gradient(6px 6px at 100px 75px, #ffffff, transparent),
+    radial-gradient(3px 3px at 150px 125px, #ffffff, transparent),
+    radial-gradient(4px 4px at 200px 175px, #ffffff, transparent),
+    radial-gradient(6px 6px at 250px 225px, #ffffff, transparent),
+    radial-gradient(3px 3px at 25px 50px, #ffffff, transparent),
+    radial-gradient(4px 4px at 75px 100px, #ffffff, transparent),
+    radial-gradient(6px 6px at 125px 150px, #ffffff, transparent),
+    radial-gradient(3px 3px at 175px 200px, #ffffff, transparent);
+  background-size: var(--block-animation-background-size)
+    var(--block-animation-background-size);
+  animation: blockScreenSnowAnimation 2s linear infinite;
+}
+.block-snow::after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-direction: reverse;
+  animation-duration: 4s;
+}
+.block-snow::before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-direction: reverse;
+  animation-duration: 6s;
+}
+
+@keyframes blockScreenSnowAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(var(--block-animation-background-size));
+  }
+}
+
+/* Snow Animation for Block - End */

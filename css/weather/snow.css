@@ -1,0 +1,50 @@
+/* SNOW ANIMATION EFFECT */
+.snow-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+.snow,
+.snow::after,
+.snow::before {
+  content: "";
+  top: -200px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: radial-gradient(4px 4px at 25px 0px, #ffffff, transparent),
+    radial-gradient(6px 6px at 50px 25px, #ffffff, transparent),
+    radial-gradient(3px 3px at 75px 50px, #ffffff, transparent),
+    radial-gradient(4px 4px at 100px 75px, #ffffff, transparent),
+    radial-gradient(6px 6px at 125px 25px, #ffffff, transparent),
+    radial-gradient(3px 3px at 0px 50px, #ffffff, transparent),
+    radial-gradient(4px 4px at 25px 75px, #ffffff, transparent),
+    radial-gradient(6px 6px at 50px 100px, #ffffff, transparent),
+    radial-gradient(3px 3px at 75px 125px, #ffffff, transparent);
+  background-size: 200px 200px;
+  animation: snowAmin 3s linear infinite;
+}
+.snow::after {
+  margin-left: -52px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-direction: reverse;
+  animation-duration: 6s;
+}
+.snow::before {
+  margin-left: -100px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-direction: reverse;
+  animation-duration: 9s;
+}
+
+@keyframes snowAmin {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(200px);
+  }
+}
