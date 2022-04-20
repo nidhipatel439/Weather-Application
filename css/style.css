@@ -51,11 +51,6 @@ button {
 #main-content {
   padding: 2em 0;
 }
-.column {
-  border: 1px solid #000000;
-  margin: 0 15px;
-  text-align: left;
-}
 
 .hide {
   display: none;

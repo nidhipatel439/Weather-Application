@@ -7,7 +7,11 @@
     <link href="bulma/css/bulma.min.css" type="text/css" rel="stylesheet" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <link href="css/nav.css" type="text/css" rel="stylesheet" />
-    <link href="css/weather/snow.css" type="text/css" rel="stylesheet" />
+    <link href="css/snow.css" type="text/css" rel="stylesheet" />
+    <link href="css/rainy.css" type="text/css" rel="stylesheet" />
+    <link href="css/sunny.css" type="text/css" rel="stylesheet" />
+    <link href="css/svg.css" type="text/css" rel="stylesheet" />
+
     <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -64,20 +68,32 @@
           <section id="main-content">
             <div class="columns" id="weather-column">
               <div class="column">
-                <div class="snow-wrap">
-                  <div class="snow">
-                    <!-- <div id="city-temp">10C</div>
-                    <div id="city-name">Brampton</div> -->
-                  </div>
+                <div class="block-snow-wrapper">
+                  <div class="block-snow"></div>
                 </div>
               </div>
               <div class="column">
-                <div id="city-name"></div>
-                <div id="city-temp"></div>
+                <div class="block-rainy">
+                  <div class="cloud x1"></div>
+                  <div class="cloud x2"></div>
+                  <div class="cloud x6"></div>
+                </div>
               </div>
               <div class="column">
-                <div id="city-name"></div>
-                <div id="city-temp"></div>
+                <div class="wrapper">
+                  <div class="sunny"></div>
+                  <object
+                    class="background"
+                    type="image/svg+xml"
+                    data="image/red-city.svg"
+                  ></object>
+                  <div class="bird-container bird-container-one">
+                    <div class="bird bird-one"></div>
+                  </div>
+                  <div class="bird-container bird-container-two">
+                    <div class="bird bird-two"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
