@@ -164,7 +164,7 @@ button {
 /* 5A. SNOW */
 .block-snow-wrapper {
   width: 100%;
-  background-image: url("/image/background-block-snow.jpg");
+  background-image: url("../image/background-block-snow.jpg");
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -219,7 +219,7 @@ button {
 /* 5B. RAIN */
 .block-rainy {
   position: relative;
-  background-image: url("/image/background-block-rainy.jpg");
+  background-image: url("../image/background-block-rainy.jpg");
   width: 100%;
   background-size: cover;
   overflow: hidden;
@@ -233,7 +233,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/image/rain.png");
+  background: url("../image/rain.png");
   animation: rain 0.2s linear infinite;
 }
 .cloud {
@@ -362,7 +362,7 @@ button {
 /* 5C. SUNNY */
 .block-sunny {
   width: 100%;
-  background: url("/image/background-block-sunny.jpg");
+  background: url("../image/background-block-sunny.jpg");
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -404,7 +404,7 @@ button {
     scaleDown 1s linear infinite reverse;
 }
 .bird {
-  background-image: url("/image/bird-cells-new.svg");
+  background-image: url("../image/bird-cells-new.svg");
   background-size: auto 100%;
   width: 88px;
   height: 125px;
@@ -507,11 +507,11 @@ button {
 
 /* 6.MAIN BACKGROUND-CHANGE THROUGH JS */
 .background-snow {
-  background: url("/image/background-snow.jpg") no-repeat;
+  background: url("../image/background-snow.jpg") no-repeat;
   background-size: cover;
 }
 .background-rain {
-  background: url("/image/background-rainy.jpg") no-repeat;
+  background: url("../image/background-rainy.jpg") no-repeat;
   background-size: cover;
 }
 .background-rain::before {
@@ -521,29 +521,10 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/image/rain.png");
+  background: url("../image/rain.png");
   animation: rain 0.2s linear infinite;
 }
 .background-sunny {
-  background: url("/image/background-sunny.jpg") no-repeat;
+  background: url("../image/background-sunny.jpg") no-repeat;
   background-size: cover;
-}
-
-.btn-5 {
-  border: 0 solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 1px solid;
-  outline-color: rgba(255, 255, 255, 0.5);
-  outline-offset: 0px;
-  text-shadow: none;
-  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.btn-5:hover {
-  border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.2);
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px #427388;
 }
