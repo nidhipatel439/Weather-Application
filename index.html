@@ -6,17 +6,16 @@
     <title>Weather Application</title>
     <link href="bulma/css/bulma.min.css" type="text/css" rel="stylesheet" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
-    <link href="css/nav.css" type="text/css" rel="stylesheet" />
-    <link href="css/snow.css" type="text/css" rel="stylesheet" />
-    <link href="css/rainy.css" type="text/css" rel="stylesheet" />
-    <link href="css/sunny.css" type="text/css" rel="stylesheet" />
-    <link href="css/svg.css" type="text/css" rel="stylesheet" />
+    <!-- <link href="css/nav.css" type="text/css" rel="stylesheet" /> -->
+    <!-- <link href="css/snow.css" type="text/css" rel="stylesheet" /> -->
+    <!-- <link href="css/rainy.css" type="text/css" rel="stylesheet" /> -->
+    <!-- <link href="css/sunny.css" type="text/css" rel="stylesheet" /> -->
+    <!-- <link href="css/svg.css" type="text/css" rel="stylesheet" /> -->
 
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <section class="hero is-success is-fullheight">
-      <!-- Hero head: will stick at the top -->
+    <section class="hero is-success is-fullheight" id="full-page">
       <div class="hero-head">
         <header class="navbar">
           <div class="container">
@@ -35,20 +34,20 @@
             </div>
             <div id="navbarMenuHeroC" class="navbar-menu fill">
               <div class="navbar-end">
-                <a class="navbar-item is-active"> Home </a>
-                <a class="navbar-item"> Examples </a>
-                <a class="navbar-item"> Documentation </a>
+                <a class="navbar-item is-active">Sensor Network</a>
+                <a class="navbar-item">Maps & Radar</a>
+                <a class="navbar-item">Severe Weather</a>
               </div>
             </div>
           </div>
         </header>
       </div>
-
-      <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
           <section id="banner-text">
-            <p class="title is-1">Receive your free daily weather forecast.</p>
+            <h1 class="title is-1">
+              Receive your free daily weather forecast.
+            </h1>
             <p class="subtitle">Type in your region to see it in action:</p>
             <div class="field has-addons field-center">
               <p class="control">
@@ -60,38 +59,233 @@
                 />
               </p>
               <p class="control">
-                <button class="button" id="search-button">Check it</button>
+                <button class="button">Check it</button>
               </p>
-              <p id="error-message" class="hide">Please enter the city name</p>
             </div>
           </section>
           <section id="main-content">
             <div class="columns" id="weather-column">
-              <div class="column">
+              <div class="column" id="snow-column">
                 <div class="block-snow-wrapper">
                   <div class="block-snow"></div>
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="content">
+                        <h2>Brampton</h2>
+                        <h3>-3<span>&#176;</span></h3>
+                        <p class="weather-condition">Snow</p>
+                        <div class="card shadow hourly-forecast">
+                          <ul>
+                            <li>
+                              <p>10Am</p>
+                              <img src="image/rain-icon.png" alt="rain icon" />
+                              <p>0<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/suncloud-icon.png"
+                                alt="sun with cloud icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>12Am</p>
+                              <img src="image/sun-icon.png" alt="sun icon" />
+                              <p>11<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="temp-other-info">
+                          <ul>
+                            <li>
+                              <p>Feels like</p>
+                              <h4>2<span>&#176;</span></h4>
+                            </li>
+                            <li>
+                              <p>Visibility</p>
+                              <h4>10 km</h4>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="column">
+              <div class="column" id="rainy-column">
                 <div class="block-rainy">
                   <div class="cloud x1"></div>
                   <div class="cloud x2"></div>
-                  <div class="cloud x6"></div>
+                  <div class="cloud x3"></div>
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="content">
+                        <h2>Brampton</h2>
+                        <h3>-3<span>&#176;</span></h3>
+                        <p class="weather-condition">Snow</p>
+                        <div class="card shadow hourly-forecast">
+                          <ul>
+                            <li>
+                              <p>10Am</p>
+                              <img src="image/rain-icon.png" alt="rain icon" />
+                              <p>0<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/suncloud-icon.png"
+                                alt="sun with cloud icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>12Am</p>
+                              <img src="image/sun-icon.png" alt="sun icon" />
+                              <p>11<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="temp-other-info">
+                          <ul>
+                            <li>
+                              <p>Feels like</p>
+                              <h4>2<span>&#176;</span></h4>
+                            </li>
+                            <li>
+                              <p>Visibility</p>
+                              <h4>10 km</h4>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="column">
-                <div class="wrapper">
+              <div class="column" id="sunny-column">
+                <div class="block-sunny">
                   <div class="sunny"></div>
-                  <object
-                    class="background"
-                    type="image/svg+xml"
-                    data="image/red-city.svg"
-                  ></object>
                   <div class="bird-container bird-container-one">
                     <div class="bird bird-one"></div>
                   </div>
                   <div class="bird-container bird-container-two">
                     <div class="bird bird-two"></div>
+                  </div>
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="content">
+                        <h2>Brampton</h2>
+                        <h3>-3<span>&#176;</span></h3>
+                        <p class="weather-condition">Snow</p>
+                        <div class="card shadow hourly-forecast">
+                          <ul>
+                            <li>
+                              <p>10Am</p>
+                              <img src="image/rain-icon.png" alt="rain icon" />
+                              <p>0<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/suncloud-icon.png"
+                                alt="sun with cloud icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>12Am</p>
+                              <img src="image/sun-icon.png" alt="sun icon" />
+                              <p>11<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                            <li>
+                              <p>11Am</p>
+                              <img
+                                src="image/rain-icon.png"
+                                alt="temp-rain-icon"
+                              />
+                              <p>9<span>&#176;</span></p>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="temp-other-info">
+                          <ul>
+                            <li>
+                              <p>Feels like</p>
+                              <h4>2<span>&#176;</span></h4>
+                            </li>
+                            <li>
+                              <p>Visibility</p>
+                              <h4>10 km</h4>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -99,8 +293,6 @@
           </section>
         </div>
       </div>
-
-      <!-- Hero footer: will stick at the bottom -->
       <div class="hero-foot">
         <p>2022 Nidhi Patel</p>
       </div>

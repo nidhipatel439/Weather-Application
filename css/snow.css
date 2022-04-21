@@ -1,22 +1,19 @@
-:root {
-  --block-animation-background-size: 250px;
-}
-
 /* Snow Animation for Block - Start */
 .block-snow-wrapper {
-  height: 70vh;
+  /* height: 70vh; */
   width: 100%;
   background-image: url("/image/background-block-snow.jpg");
   background-size: cover;
-  background-position: center bottom;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
+  opacity: 0.9;
 }
 .block-snow,
 .block-snow::after,
 .block-snow::before {
   content: "";
-  top: calc(-1 * var(--block-animation-background-size));
+  top: -250px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -30,8 +27,7 @@
     radial-gradient(4px 4px at 75px 100px, #ffffff, transparent),
     radial-gradient(6px 6px at 125px 150px, #ffffff, transparent),
     radial-gradient(3px 3px at 175px 200px, #ffffff, transparent);
-  background-size: var(--block-animation-background-size)
-    var(--block-animation-background-size);
+  background-size: 250px 250px;
   animation: blockScreenSnowAnimation 2s linear infinite;
 }
 .block-snow::after {
@@ -54,7 +50,7 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(var(--block-animation-background-size));
+    transform: translateY(250px);
   }
 }
 
