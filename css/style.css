@@ -35,6 +35,9 @@ input::placeholder {
 button {
   font-family: "Josefin Sans", sans-serif;
 }
+:focus-visible {
+  outline: none;
+}
 
 /* 2. CHANGE IN BULMA STYLE */
 .field.has-addons.field-center {
@@ -53,67 +56,62 @@ button {
 .hero-body {
   z-index: 2;
 }
+.navbar-item img {
+  max-height: 3.75rem;
+}
+.hero.is-success a.logo:hover {
+  background-color: transparent;
+}
+.hero.is-success {
+  background-color: #000000;
+}
+a.navbar-item:focus,
+a.navbar-item:focus-within {
+  background-color: transparent;
+}
 
 /* 3. MAIN */
 /* NAVBAR ANIMATION EFFECT */
-.navbar-menu.fill a {
+.hero.is-success .navbar-menu a {
   position: relative;
+  border: 2px solid transparent;
 }
-.navbar-menu.fill a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: "";
-  color: transparent;
-  background: #aaa;
-  height: 1px;
-  margin: 0;
-  opacity: 0;
-  text-align: left;
-}
-
-.navbar-menu.fill a:hover {
-  color: #fff;
+.hero.is-success .navbar-menu a:hover,
+.hero.is-success .navbar-menu a:active,
+.hero.is-success .navbar-menu a.nav-active {
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(37, 173, 245, 1) 0%,
+    rgba(242, 129, 39, 1) 50%,
+    rgba(250, 203, 50, 1) 100%
+  );
+  border-image-slice: 1;
   z-index: 1;
   transition: all 2s;
+  background-color: transparent;
 }
-.navbar-menu.fill a:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  opacity: 1;
+.navbar-item {
+  padding-top: 0;
+  padding-bottom: 0;
 }
-/* Keyframes */
-@keyframes fill {
-  0% {
-    width: 0%;
-    height: 1px;
-  }
-  50% {
-    width: 100%;
-    height: 1px;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    background: #333;
-  }
+.navbar {
+  padding: 0.5em 0;
 }
 
 /* 3. BANNER*/
 #banner-text {
   padding: 2em 0;
 }
-#full-page {
-  background-color: #000000;
+.full-background {
   z-index: 0;
   overflow: hidden;
   position: relative;
 }
 
 /* 4. MAIN CONTENT */
+#body-wrapper {
+  z-index: 1;
+}
 #main-content {
   padding: 2em 0;
 }
@@ -149,14 +147,35 @@ button {
   display: inline-block;
   padding: 0.4em;
 }
+.hourly-forecast img:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
 #weather-column .column:hover {
   box-shadow: 0px 0px 6px 6px rgba(254, 254, 254, 0.3);
   border-radius: 10px;
 }
-#weather-column .column:hover .block-snow-wrapper,
-#weather-column .column:hover .block-rainy,
-#weather-column .column:hover .block-sunny {
-  opacity: 1;
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 /* 5. WEATHER */
@@ -164,12 +183,11 @@ button {
 /* 5A. SNOW */
 .block-snow-wrapper {
   width: 100%;
-  background-image: url("../image/background-block-snow.jpg");
+  background: url("../image/background-block-snow.jpg") no-repeat;
   background-size: cover;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  opacity: 0.9;
 }
 .block-snow,
 .block-snow::after,
@@ -219,12 +237,11 @@ button {
 /* 5B. RAIN */
 .block-rainy {
   position: relative;
-  background-image: url("../image/background-block-rainy.jpg");
+  background: url("../image/background-block-rainy.jpg") no-repeat;
   width: 100%;
   background-size: cover;
   overflow: hidden;
   border-radius: 10px;
-  opacity: 0.9;
 }
 .block-rainy::before {
   content: "";
@@ -273,10 +290,10 @@ button {
   background: #bfd6d8;
 }
 .x2 {
-  top: 10px;
-  left: 50px;
+  top: 3px;
+  left: 0;
   transform: scale(0.7);
-  opacity: 1;
+  opacity: 0.8;
   animation: moveclouds 35s linear infinite;
 }
 .x3 {
@@ -287,12 +304,12 @@ button {
   animation: moveclouds 20s linear infinite;
 }
 .x1 {
-  left: 0;
-  top: 0;
+  left: 4px;
+  top: 36px;
   transform: scale(0.8);
   opacity: 0.5;
   animation: thunder 4s linear 0.02s infinite alternate,
-    moveclouds 10s linear infinite;
+    moveclouds 15s linear infinite;
   background: #bfd6d8;
 }
 
@@ -362,12 +379,11 @@ button {
 /* 5C. SUNNY */
 .block-sunny {
   width: 100%;
-  background: url("../image/background-block-sunny.jpg");
+  background: url("../image/background-block-sunny.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  opacity: 0.9;
 }
 .sunny {
   position: absolute;
@@ -478,15 +494,6 @@ button {
   }
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 100%;
-  }
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -506,14 +513,6 @@ button {
 }
 
 /* 6.MAIN BACKGROUND-CHANGE THROUGH JS */
-.background-snow {
-  background: url("../image/background-snow.jpg") no-repeat;
-  background-size: cover;
-}
-.background-rain {
-  background: url("../image/background-rainy.jpg") no-repeat;
-  background-size: cover;
-}
 .background-rain::before {
   content: "";
   position: absolute;
@@ -525,6 +524,11 @@ button {
   animation: rain 0.2s linear infinite;
 }
 .background-sunny {
-  background: url("../image/background-sunny.jpg") no-repeat;
+  background: url("../image/sun-background.jpg") no-repeat;
   background-size: cover;
+}
+
+/* 7.FOOTER */
+#footer {
+  text-align: center;
 }
