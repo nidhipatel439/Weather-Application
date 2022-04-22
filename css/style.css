@@ -13,6 +13,7 @@
 *   6B. RAIN
 *   6C. SUNNY 
 * 7.MAIN BACKGROUND-CHANGE THROUGH JS   
+* 8.MEDIA-QUERY CSS
 **********************/
 
 /* 1. GENERAL STYLES */
@@ -97,6 +98,9 @@ a.navbar-item:focus-within {
 .navbar {
   padding: 0.5em 0;
 }
+.navbar-burger {
+  color: #ffffff;
+}
 
 /* 3. BANNER*/
 #banner-text {
@@ -152,6 +156,11 @@ a.navbar-item:focus-within {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+.hourly-forecast ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 #weather-column .column:hover {
   box-shadow: 0px 0px 6px 6px rgba(254, 254, 254, 0.3);
@@ -531,4 +540,25 @@ a.navbar-item:focus-within {
 /* 7.FOOTER */
 #footer {
   text-align: center;
+}
+
+/* 8.MEDIA-QUERY CSS */
+@media screen and (max-width: 1023px) {
+  .hero.is-success .navbar-menu {
+    background: linear-gradient(
+      0deg,
+      rgba(37, 173, 245, 1) 0%,
+      rgba(242, 129, 39, 1) 50%,
+      rgba(250, 203, 50, 1) 100%
+    );
+  }
+
+  .hero.is-success .navbar-menu a:hover,
+  .hero.is-success .navbar-menu a:active,
+  .hero.is-success .navbar-menu a.nav-active,
+  .hero.is-success .navbar-menu a {
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
 }
